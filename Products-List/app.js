@@ -1,7 +1,8 @@
 import { products } from "./products.js";
 
 const sectionCenter = document.querySelector(".section-center");
-const productList = products.map((product) => `
+const productList = products.map(
+	(product) => `
         <article class="product-item">
             <img src="${product.thumbnail}" alt="${product.title}" class="photo">
             <div class="item-info">
@@ -12,16 +13,15 @@ const productList = products.map((product) => `
             <h4 class="price">$${product.price}</h4>
             </div>
         </article>
-    ` 
+    `
 );
 
-
 const categories = products.reduce((acc, product) => {
-    if(!acc.includes(item-category)) {
-        acc.push(item.category);
-    };
-    return acc;
-});
+	if (!acc.includes(product.category)) {
+		acc.push(product.category);
+	}
+	return acc;
+}, []);
 
 // removes comma from array
-sectionCenter.innerHTML = productList.join('');
+sectionCenter.innerHTML = productList.join("");
