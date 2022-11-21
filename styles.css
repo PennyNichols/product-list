@@ -234,9 +234,28 @@ main {
   padding-top: 1rem;
 }
 
+@media screen and (max-width: 600px){
+  .section-center{
+    margin-top: 330px;
+  }
+ 
+  .product-item{
+    max-width: 300px;
+  }
+
+  .item-text{
+    word-wrap: wrap;
+    width: 225px;
+  }
+
+  .filter-btn{
+    font-size: 14px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .section-center {
-    width: 95vw;
+    width: 90vw;
     grid-template-columns: 1fr 1fr;
   }
   .product-item {
